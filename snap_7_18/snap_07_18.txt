@@ -1,3 +1,10 @@
+/**
+*convert a weight or mass to grams
+*
+*@param value The value of the weight or mass to be converted
+*@param units The units of the weight or mass to be converted
+**/
+
 function convertToGrams(float value, string units){
 	if (units.toLowerCase() == g){
 		return value + "g";
@@ -14,21 +21,31 @@ function convertToGrams(float value, string units){
 	else if (units.toLowerCase() == lbs){
 		return (value*453.592) + "g";
 	}
+	else return "Cannot compute invalid input";
 }
 
+
+/**
+*Adds the unique positive factors of a number
+*@param number The number to be factored
+*@return the sum of the factors
+**/
+
 function sumOfFactors(number) {
+	var sum = 0;
   var factorList = [];
   var listPlace = 0;
   var isDivisable;
   var looper = 1;
   while(looper <= number){
   	var isDivisable = factorizer(number, looper)
-  	if (isDivisable != 0){
+  	if (isDivisable != false){
   		factorList[listPlace] = looper;
   		listPlace++;
   	}
   	looper++;
   }
+
 }
 
 function factorizer(number, looper){
