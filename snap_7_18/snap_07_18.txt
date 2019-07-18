@@ -1,0 +1,36 @@
+function convertToGrams(float value, string units){
+	if (units.toLowerCase() == g){
+		return value + "g";
+	}
+	else if (units.toLowerCase() == mg){
+		return (value*1000) + "g";
+	}
+	else if (units.toLowerCase() == kg){
+		return (value/1000) + "g";
+	}
+	else if (units.toLowerCase() == oz){
+		return (value*28.3495) + "g";
+	}
+	else if (units.toLowerCase() == lbs){
+		return (value*453.592) + "g";
+	}
+}
+
+function sumOfFactors(number) {
+  var factorList = [];
+  var listPlace = 0;
+  var times;
+  var looper = 1;
+  while(looper <= number){
+  	var testValue = factorizer(number, looper)
+  	if (testValue != 0){
+  		factorList[listPlace] = looper;
+  		listPlace++;
+  	}
+  	looper++;
+  }
+}
+
+function factorizer(number, looper){
+	return !(number%looper);
+}
