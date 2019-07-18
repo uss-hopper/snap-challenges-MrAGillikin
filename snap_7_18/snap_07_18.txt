@@ -19,11 +19,11 @@ function convertToGrams(float value, string units){
 function sumOfFactors(number) {
   var factorList = [];
   var listPlace = 0;
-  var times;
+  var isDivisable;
   var looper = 1;
   while(looper <= number){
-  	var testValue = factorizer(number, looper)
-  	if (testValue != 0){
+  	var isDivisable = factorizer(number, looper)
+  	if (isDivisable != 0){
   		factorList[listPlace] = looper;
   		listPlace++;
   	}
