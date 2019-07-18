@@ -33,21 +33,11 @@ function convertToGrams(float value, string units){
 
 function sumOfFactors(number) {
 	var sum = 0;
-  var factorList = [];
-  var listPlace = 0;
-  var isDivisable;
-  var looper = 1;
-  while(looper <= number){
-  	var isDivisable = factorizer(number, looper)
-  	if (isDivisable != false){
-  		factorList[listPlace] = looper;
-  		listPlace++;
-  	}
-  	looper++;
-  }
 
-}
-
-function factorizer(number, looper){
-	return !(number%looper);
+	for(i=1; i<=number; i++){
+		if (number%i === 0){
+			sum = sum+i
+		}
+	}
+	return sum;
 }
