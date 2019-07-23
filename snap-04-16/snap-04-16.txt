@@ -11,7 +11,7 @@ create table task(
 
 
 
-SELECT tweetContent, profileAtHandle
+SELECT tweet.tweetContent, profile.profileAtHandle
 
 FROM tweet INNER JOIN 'like' AT tweet.tweetId = like.tweetId
 
