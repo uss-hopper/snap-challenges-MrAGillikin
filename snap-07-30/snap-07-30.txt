@@ -8,7 +8,7 @@
  * @throws \TypeError when a variable are not the correct data type
  **/
 
-public function getTweetsByTweetDate ($tweetDate = null) {
+public function getTweetsByTweetDate (\PDO $pdo, DateTime $tweetDate) {
 	try {
    			$tweetDate = self::validateDateTime($tweetDate);
    		} catch(\InvalidArgumentException | \RangeException $exception) {
