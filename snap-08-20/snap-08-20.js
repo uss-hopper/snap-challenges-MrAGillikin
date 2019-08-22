@@ -4,5 +4,7 @@ var paragraph = "Ensign Babyface! Your shields were failing, sir. This should be
 
 var arr = paragraph.split(" ");
 
-result = arr.filter(/\b(A|a)\w* /);
+result = arr.filter(word => !(/\b(A|a)\w*/));
+paragraph = result.join(" ");
+
 console.log(result);
