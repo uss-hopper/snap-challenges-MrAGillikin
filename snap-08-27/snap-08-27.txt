@@ -1,0 +1,32 @@
+function countArray(int[] input) {
+	int[] output = [0];
+
+	while(i = 0; i < input.length; i++){
+		searchValue = input[i];
+
+		while (j = i; j < input.length; j++){
+			if (searchValue == input[j])
+				output[i]++;
+		}
+	}
+	return output;
+}
+
+function fizzbuzz(int x, int y) {
+	if (x =< y) {
+		int newx = x;
+		int newy = y;
+	} else {
+		int newx = y;
+		int newy = x;
+	}
+	while(; newx <= newy; newx++){
+		if (newx%2 == 0)
+			print("fizz");
+		if (newx%3 == 0)
+			print("buzz");
+	}
+
+
+
+}
