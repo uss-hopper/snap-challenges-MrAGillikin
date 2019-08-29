@@ -1,0 +1,35 @@
+function removeVowels(String input){
+	inputCopy = input;
+	while(i=0; i<inputCopy.length();){
+		if(inputCopy[i] == a||e||i||o||u){
+			inputCopy[i] = "";
+		}
+		else {
+		i++;
+		}
+	}
+	return inputCopy;
+	//This works for languages where strings can be defined as arrays.
+}
+
+function greatestInArray(int[]||float[] input){
+	int result = input[0];
+	while (i=1; i< input.sizeOf(); i++) {
+		if (input[i] > result){
+			result = input[i];
+		}
+	}
+	return result;
+}
+
+function getFibonacciHundred(){
+	int i = 0;
+	int j = 1; //fibonacci starts at 1.
+	int k = 0; //Just a placeholder variable. A third cup to store information during the fibonacci calculations.
+	while (i=1; i<=100; i++){
+		print(j + ", ");
+		k = j;
+		j = i +j
+		i = k;
+	}
+}
