@@ -1,0 +1,6 @@
+//Map this array of text to the DOM.
+
+//['Bob', 'Jim', Matt', 'Mary', 'Suzy', ' Sarah']
+
+//hint: Each array element must appear in it's own html tag in the browser.
+
