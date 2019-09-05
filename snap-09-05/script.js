@@ -1,11 +1,13 @@
-const axios = require('axios');
+const onPageLoad = () => {
+	axios.get('https://dog.ceo/api/breeds/list/all').then(({data})=> {
+		let breeds = data.message;
+		let cards = '';
 
-const getBreeds = async() => {
-	try {
-		return await axios.get('https://dog.ceo/api/breeds/list/all')
-	} catch (error){
-		console.error(error);
-	}
+		for (let key in breeds){
+			cards = cards + '<li>' + key + '</li>';
+		}
+		cards = '<ul>' + cards + '</ul>';
+		let html = document.getElementById("target");
+		html.innerHTML = cards;
+	});
 };
-
-document.getElementById("target").value = getBreeds;
